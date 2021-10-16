@@ -14,7 +14,7 @@ module.exports = {
                 const timeout = setTimeout(() => {
                     if (client.player?.players.get(newC.guild.id) && client.channels.cache.get(client.player?.players.get(newC.guild.id).voiceChannel).members.filter(x => !x.user.bot).size === 0) {
                         const leftEmbed = new MessageEmbed()
-                            .setDescription('Destroying player and leaving voice channel due to inactivity')
+                            .setDescription("Destroying player and leaving voice channel due to leaving me all alone :'D")
                             .setColor(client.guilds.cache.get(newC.guild.id).me.displayHexColor !== '#000000' ? client.guilds.cache.get(newC.guild.id).me.displayHexColor : '#00C7FF')
                         client.channels.cache.get(client.player?.players.get(newC.guild.id).textChannel)?.send(leftEmbed)
                         client.player?.players.get(newC.guild.id).destroy()
