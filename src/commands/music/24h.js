@@ -2,7 +2,7 @@ const handler = require('../../handlers/message');
 
 module.exports = {
     name: '24h',
-    description: 'bot whether to leave vc when there\'s user inside vc or not',
+    description: "Bot whether to leave vc when there's user inside vc or not",
     usage: '24h',
     async execute(message, args, client) {
         const player = client.player.players.get(message.guild.id);

@@ -2,7 +2,7 @@ const handler = require('../../handlers/message');
 
 module.exports = {
     name: 'clear',
-    description: 'Clear the queue',
+    description: 'Clears the queue',
     usage: 'clear',
     async execute(message, args, client) {
         const player = client.player.players.get(message.guild.id);

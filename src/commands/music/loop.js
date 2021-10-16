@@ -2,7 +2,7 @@ const handler = require('../../handlers/message');
 
 module.exports = {
     name: 'loop',
-    description: 'Loop the player',
+    description: 'Loops the track or the queue',
     usage: 'loop',
     aliases: ['l'],
     async execute(message, args, client) {
