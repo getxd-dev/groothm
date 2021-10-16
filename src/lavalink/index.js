@@ -79,8 +79,8 @@ class lavalink extends Manager {
             return client.playerHandler.delete(player.guild)
         })
         this.on('playerCreate', (player) => {
-            player.set('rateLimitStatus', {status: false})
-            player.set('24h', {status: false})
+            player.set('rateLimitStatus', { status: false })
+            player.set('24h', { status: false })
         })
         this.on('trackStart', (player, track) => {
             if (player.get('rateLimitStatus').status === true) return;
@@ -90,7 +90,7 @@ class lavalink extends Manager {
                 .setAuthor("Now Playing")
                 .setDescription(`${track ? `[${track.title}](${track.uri}) [${track.requester}]` : 'Unknown. Please skip or skipto to bring back current data'}`)
                 .setColor(guild.me.displayHexColor !== '#000000' ? guild.me.displayHexColor : '#00C7FF')
-            channel.send({embed: playEmbed}).then(msg => player.set('message', msg))
+            channel.send({ embed: playEmbed }).then(msg => player.set('message', msg))
             return client.playerHandler.savePlayer(player)
         })
         this.on('trackEnd', (player) => {
@@ -112,7 +112,7 @@ class lavalink extends Manager {
                 .setAuthor("Stuck")
                 .setDescription(`There was an error while playing **${track.title}** \n\`\`\`${payload.type}\`\`\``)
                 .setColor(guild.me.displayHexColor !== '#000000' ? guild.me.displayHexColor : '#00C7FF')
-            channel.send({embed: playEmbed}).then(msg => player.set('stuck', msg))
+            channel.send({ embed: playEmbed }).then(msg => player.set('stuck', msg))
             if (player.get('nowplaying')) {
                 clearInterval(player.get('nowplaying'));
                 player.get('nowplayingMSG').delete().catch(() => {
@@ -130,11 +130,11 @@ class lavalink extends Manager {
                     .setAuthor("Error")
                     .setDescription(`Got a lot of errors within a short time. Now playing embed will be stopped for 40s to prevent spamming.`)
                     .setColor(guild.me.displayHexColor !== '#000000' ? guild.me.displayHexColor : '#00C7FF')
-                player.set('rateLimitStatus', {status: true})
+                player.set('rateLimitStatus', { status: true })
                 setTimeout(() => {
-                    player.set('rateLimitStatus', {status: false})
+                    player.set('rateLimitStatus', { status: false })
                 }, 40000);
-                channel.send({embed: errorEmbed}).then(msg => player.set('rateLimitMsg', msg))
+                channel.send({ embed: errorEmbed }).then(msg => player.set('rateLimitMsg', msg))
             } else if (player.get('rateLimitStatus').status === true) {
                 return
             } else {
@@ -149,7 +149,7 @@ class lavalink extends Manager {
                     .setAuthor("Error")
                     .setDescription(`There was an error while playing **${track.title}** \n\`\`\`${err ? err : 'No error was provided from host'}\`\`\``)
                     .setColor(guild.me.displayHexColor !== '#000000' ? guild.me.displayHexColor : '#00C7FF')
-                channel.send({embed: errorEmbed}).then(msg => player.set('error', msg))
+                channel.send({ embed: errorEmbed }).then(msg => player.set('error', msg))
                 if (player.get('nowplaying')) {
                     clearInterval(player.get('nowplaying'));
                     player.get('nowplayingMSG').delete().catch(() => {
@@ -157,7 +157,7 @@ class lavalink extends Manager {
                 }
             }
             client.rateLimit.delete(player.guild)
-            client.rateLimit.set(player.guild, {time: time1})
+            client.rateLimit.set(player.guild, { time: time1 })
         })
         this.on('queueEnd', (player) => {
             const channel = client.channels.cache.get(player.textChannel);
@@ -171,7 +171,7 @@ class lavalink extends Manager {
                 player.get('nowplayingMSG').delete().catch(() => {
                 })
             }
-            channel.send({embed: noQueueEmbed}).catch(() => {
+            channel.send({ embed: noQueueEmbed }).catch(() => {
             })
             setTimeout(() => {
                 const e = client.player.players.get(player.guild)
@@ -181,7 +181,7 @@ class lavalink extends Manager {
                         .setAuthor("End")
                         .setDescription(`Leaving due to inactivity`)
                         .setColor(guild.me.displayHexColor !== '#000000' ? guild.me.displayHexColor : '#00C7FF')
-                    channel.send({embed: leftEmbed}).catch(() => {
+                    channel.send({ embed: leftEmbed }).catch(() => {
                     })
                 }
             }, 180000);
