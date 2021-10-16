@@ -7,7 +7,7 @@ const lyricsFinder = require('lyrics-finder');
 
 module.exports = {
     name: 'lyrics',
-    description: 'Get specific/ urrent playing song',
+    description: 'Get the lyrics on currently playing song.',
     usage: 'lyrics [ title ]',
     aliases: ['ly'],
     async execute(message, args, client) {

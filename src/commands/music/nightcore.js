@@ -2,7 +2,7 @@ const handler = require('../../handlers/message');
 
 module.exports = {
     name: 'nightcore',
-    description: 'Set nightcore for player',
+    description: 'Apply nightcore effect on the current song.',
     aliases: ['nc'],
     usage: 'nightcore',
     async execute(message, args, client) {
