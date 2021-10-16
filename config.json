@@ -1,0 +1,25 @@
+{
+  "TOKEN": "NzE5MzUwMzQwNDIzNjQ3Mjcz.Xt2JNg.EaNvXivJJXMDVjU4ipxZFxPhaTk",
+  "PREFIX": ";",
+  "OWNERS": ["335654844272738306"],
+  "MONGODB_URI": "mongodb+srv://dbUser:Mendoza10!@cluster0.4yofs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "SPOTIFY_CLIENT_ID": "09804aaabd4a4870a06370d95b6b9a60",
+  "SPOTIFY_CLIENT_SECRET": "ecf123a450924090b8280ca52d6673e7",
+  "KSOFT_API_KEY": "",
+  "GENIUS_API_KEY": "",
+  "NODES": [
+    {
+      "HOST": "localhost",
+      "PASSWORD": "youshallnotpass",
+      "PORT": 2333,
+      "IDENTIFIER": "node",
+      "RETRY_AMOUNT": 10,
+      "RETRY_DELAY": 5000,
+      "SECURE": false
+    }
+  ],
+  "AUTO_RESUME_DELAY": 15,
+  "LYRICS_ENGINE": "google",
+  "DEBUG": true,
+  "LOG_USAGE": false
+}
