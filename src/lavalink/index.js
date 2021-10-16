@@ -164,7 +164,7 @@ class lavalink extends Manager {
             const guild = client.guilds.cache.get(player.guild)
             const noQueueEmbed = new MessageEmbed()
                 .setAuthor("End")
-                .setDescription(`Queue has ended.`)
+                .setDescription(`Seems like queue has ended. Add more by using play command!`)
                 .setColor(guild.me.displayHexColor !== '#000000' ? guild.me.displayHexColor : '#00C7FF')
             if (player.get('nowplaying')) {
                 clearInterval(player.get('nowplaying'));
