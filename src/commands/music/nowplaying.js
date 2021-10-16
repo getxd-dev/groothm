@@ -27,7 +27,7 @@ module.exports = {
             .setFooter(new Date(musicLength - nowTime).toISOString().slice(11, 19) + ' left')
             .setColor(message.guild.me.displayHexColor !== '#000000' ? message.guild.me.displayHexColor : '#00C7FF')
             .setDescription(`[${player.queue.current.isStream ? '◉ LIVE' : `${new Date(player.position).toISOString().slice(11, 19)}`}]` +
-                splitBar(musicLength ? Number(musicLength) : 1, nowTime ? Number(nowTime) : 2, 26, '=', 'X')[0] +
+            splitBar(musicLength ? Number(musicLength) : 1, nowTime ? Number(nowTime) : 2, 26, '━', '🔘')[0] +
                 `[${player.queue.current.isStream ? '◉ LIVE' : `${new Date(player.queue.current.duration).toISOString().slice(11, 19)}`}]`)
         message.channel.send(embed).then(msg => player.set('nowplayingMSG', msg))
 
@@ -44,7 +44,7 @@ module.exports = {
                 .setFooter(new Date(musicLength - nowTime).toISOString().slice(11, 19) + ' left')
                 .setColor(message.guild.me.displayHexColor !== '#000000' ? message.guild.me.displayHexColor : '#00C7FF')
                 .setDescription(`[${player.queue.current.isStream ? '◉ LIVE' : `${new Date(player.position).toISOString().slice(11, 19)}`}]` +
-                    splitBar(musicLength ? Number(musicLength) : 1, nowTime ? Number(nowTime) : 2, 26, '=', 'X')[0] +
+                splitBar(musicLength ? Number(musicLength) : 1, nowTime ? Number(nowTime) : 2, 26, '━', '🔘')[0] +
                     `[${player.queue.current.isStream ? '◉ LIVE' : `${new Date(player.queue.current.duration).toISOString().slice(11, 19)}`}]`)
 
             return player?.get('nowplayingMSG') ? player.get('nowplayingMSG').deleted ? '' : player.get('nowplayingMSG').edit(embed) : message.channel.send(embed).then(msg => player.set('nowplayingMSG', msg))
