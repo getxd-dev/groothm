@@ -4,7 +4,7 @@ const {MessageEmbed} = require('discord.js');
 
 module.exports = {
     name: 'nowplaying',
-    description: 'See what's currently playing and it's duration',
+    description: "See what's currently playing and it's duration",
     usage: 'nowplaying',
     aliases: ['np'],
     async execute(message, args, client) {
