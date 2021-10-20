@@ -3,7 +3,7 @@ const handler = require('../../handlers/message');
 
 module.exports = {
     name: 'volume',
-    description: 'Set volume of the player',
+    description: 'Set the volume of the song',
     usage: 'volume [ value ]',
     aliases: ['v'],
     async execute(message, args, client) {
