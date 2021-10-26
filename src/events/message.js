@@ -8,20 +8,20 @@ module.exports = {
     once: false,
     async execute(message, client) {
         if (!message.guild || message.author.bot) return;
-        
+
         let intro = new MessageEmbed()
-            .setAuthor('Groothm', 'https://www.gitbook.com/cdn-cgi/image/width=300,height=300,fit=contain,dpr=1.5,format=auto/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MiMJWwxKrFlpVznpkpb%252Ficon%252F5DeRZbY2xKKCvuBuEbHC%252FDpb2hOtU8AACnYP%2520(2).jpg%3Falt%3Dmedia%26token%3D2ee85873-a9f7-4371-b390-88751f0078a7')
+            .setAuthor('Laffey', 'https://i.imgur.com/oAmrqHD.png')
             .setDescription(`My prefix in \`${message.guild.name}\` is ${client.prefixes.get(message.guild.id) ? client.prefixes.get(message.guild.id).prefix : PREFIX}`)
             .setColor('#f50ae5')
         if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`) {
             if (!message.channel.permissionsFor(client.user).has('SEND_MESSAGES')) return message.member.send('Hey, i need `SEND_MESSAGES` permission to do interaction with user.').catch(() => { })
             return message.channel.send(intro)
         }
-        
-        const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(client.prefixes.get(message.guild)?.prefix || PREFIX)})\\s*`);
+
+        const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(client.prefixes.get(message.guild.id)?.prefix || PREFIX)})\\s*`);
         if (!prefixRegex.test(message.content)) return;
         const [, matchedPrefix] = message.content.match(prefixRegex);
-        const args = message.content.slice(matchedPrefix.length).trim().split(/ +/);
+        const args = message.content.slice(matchedPrefix.length).trim().split(/\s+/);
         const commandName = args.shift().toLowerCase();
         const command = client.commands.get(commandName) || client.commands.find(x => x.aliases?.includes(commandName));
 
