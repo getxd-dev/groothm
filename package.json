@@ -28,7 +28,7 @@
     "mime-db": "^1.46.0",
     "mime-types": "^2.1.29",
     "moment": "^2.29.1",
-    "mongoose": "^6.0.12",
+    "mongoose": "^5.12.3",
     "node-fetch": "^3.0.0",
     "os": "^0.1.1",
     "petitio": "^1.1.0",
