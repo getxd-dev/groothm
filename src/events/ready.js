@@ -13,7 +13,7 @@ module.exports = {
         client.user.setActivity(`spooky songs @_@ | ${client.defaultPrefix}help`)
         setInterval(() => {
             let statusList = [
-                `spoopy month | ${client.defaultPrefix}help`,
+                `finally fixed prefix cmd | ${client.defaultPrefix}help`,
                 `Halloween :D | ${client.defaultPrefix}help`,
                 `you play songs | ${client.defaultPrefix}help`
             ]
