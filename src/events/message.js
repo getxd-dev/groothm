@@ -10,7 +10,7 @@ module.exports = {
         if (!message.guild || message.author.bot) return;
 
         let intro = new MessageEmbed()
-            .setAuthor('Laffey', 'https://i.imgur.com/oAmrqHD.png')
+            .setAuthor('Groothm', 'https://www.gitbook.com/cdn-cgi/image/width=200,height=200,fit=contain,dpr=1.5,format=auto/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MiMJWwxKrFlpVznpkpb%252Ficon%252F5DeRZbY2xKKCvuBuEbHC%252FDpb2hOtU8AACnYP%2520(2).jpg%3Falt%3Dmedia%26token%3D2ee85873-a9f7-4371-b390-88751f0078a7')
             .setDescription(`My prefix in \`${message.guild.name}\` is ${client.prefixes.get(message.guild.id) ? client.prefixes.get(message.guild.id).prefix : PREFIX}`)
             .setColor('#f50ae5')
         if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`) {
