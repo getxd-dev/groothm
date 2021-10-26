@@ -1,54 +1,35 @@
 const prefix = require('../schemas/prefix');
 
-async function get(guildId) {
-    const data = await prefix.findOne({
-        guildID: guildId
-    })
+async function get(guildID) {
+    const data = await prefix.findOne({ guildID })
 
-    if (data) {
+    if (data)
         return { msg: 'success', error: false, prefix: data.prefix }
-    } else {
-        return { msg: 'error', error: true, prefix: null }
-    }
+    return { msg: 'error', error: true, prefix: null }
 }
 
-async function set(client, guildId, Prefix) {
-    const data = await prefix.findOne({
-        guildID: guildId
-    })
+async function set(client, guildID, Prefix) {
+    const data = await prefix.findOne({ guildID })
 
     if (data) {
-        await prefix.findOneAndUpdate({
-            guildID: guildId
-        }, {
-            guildID: guildId,
-            prefix: Prefix
-        })
-        client.prefixes.set(guildId, { prefix: Prefix, guildID: guildId })
-        return { msg: 'success', error: false, prefix: Prefix }
+        await prefix.findOneAndUpdate({ guildID }, { guildID, prefix: Prefix })
+        client.prefixes.set(guildID, { prefix: Prefix, guildID })
+        return { msg: 'success', error: false, Prefix }
     } else {
-        const newPrefix = new prefix({
-            guildID: guildId,
-            prefix: Prefix
-        })
+        const newPrefix = new prefix({ guildID, prefix: Prefix })
         newPrefix.save()
-        client.prefixes.set(guildId, { prefix: Prefix, guildID: guildId })
-        return { msg: 'success', error: false, prefix: Prefix }
+        client.prefixes.set(guildID, { prefix: Prefix, guildID })
+        return { msg: 'success', error: false, Prefix }
     }
 }
 
-async function reset(client, guildId) {
-    const data = await prefix.findOne({
-        guildID: guildId
-    })
+async function reset(client, guildID) {
+    const data = await prefix.findOne({ guildID })
+    client.prefixes.delete(guildID)
 
-    if (data) {
-        client.prefixes.delete(guildId)
-        return { msg: 'success', error: false }
-    } else {
-        client.prefixes.delete(guildId)
-        return { msg: 'error', error: true }
-    }
+    if (data)
+        return { msg: 'success', error: false };
+    return { msg: 'error', error: true };
 }
 
 module.exports = { get, set, reset }
