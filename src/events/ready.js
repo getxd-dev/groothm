@@ -10,11 +10,11 @@ module.exports = {
         const player = new lavalink(client)
         client.player = player
         player.init(client.user.id)
-        client.user.setActivity(`spooky songs @_@ | ${client.defaultPrefix}help`)
+        client.user.setActivity(`with getxd | ${client.defaultPrefix}help`)
         setInterval(() => {
             let statusList = [
                 `finally fixed prefix cmd | ${client.defaultPrefix}help`,
-                `Halloween :D | ${client.defaultPrefix}help`,
+                `idk what to put here | ${client.defaultPrefix}help`,
                 `you play songs | ${client.defaultPrefix}help`
             ]
             let choosenStatus = statusList[Math.round(Math.random() * statusList.length)]
