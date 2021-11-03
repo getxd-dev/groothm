@@ -20,6 +20,6 @@ module.exports = {
             player.connect()
             message.react('✋').catch(() => { })
         }
-        return message.channel.send(handler.normalEmbed('\'m in another channel'))
+        return message.channel.send(handler.normalEmbed("I'm in another channel"))
     }
 }
