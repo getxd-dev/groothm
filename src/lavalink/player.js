@@ -1,3 +1,4 @@
+/*change nightcore*/
 const { Structure, TrackUtils } = require('erela.js');
 
 module.exports = Structure.extend('Player', player => {
