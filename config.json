@@ -9,9 +9,9 @@
   "GENIUS_API_KEY": "",
   "NODES": [
     {
-      "HOST": "166.0.133.30",
+      "HOST": "45.134.8.41",
       "PASSWORD": "youshallnotpass",
-      "PORT": 25681,
+      "PORT": 25840,
       "IDENTIFIER": "node",
       "RETRY_AMOUNT": 10,
       "RETRY_DELAY": 5000,
