@@ -1,8 +1,8 @@
 {
-  "TOKEN": "ODA5MzIxNzQwNTQyMjc5NzAx.YCTZmw.eNHJv3doyAQpZ5ycfYglUUnpJ-A",
-  "PREFIX": "-",
+  "TOKEN": "Nzg4MjM0OTIyMDg2ODkxNTIw.X9gi-g.0jK--2s6HMNLEZRZi76Va0wK520",
+  "PREFIX": ">",
   "OWNERS": [ "335654844272738306" ],
-  "MONGODB_URI": "mongodb+srv://dbUser:Mendoza10!@cluster0.xs3ic.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "MONGODB_URI": "",
   "SPOTIFY_CLIENT_ID": "09804aaabd4a4870a06370d95b6b9a60",
   "SPOTIFY_CLIENT_SECRET": "ecf123a450924090b8280ca52d6673e7",
   "KSOFT_API_KEY": "",
