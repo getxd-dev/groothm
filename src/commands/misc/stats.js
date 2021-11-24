@@ -8,6 +8,9 @@ module.exports = {
     description: 'Get bot\'s stats',
     usage: 'stats',
     async execute(message, args, client) {
+        if (!client.owners.includes(message.author.id))
+            return message.channel.send('only cool kids can use this sry.');
+
         if (args[0]?.toLowerCase() === 'adv') {
             let page = new paginator([], { filter: (reaction, user) => user.id === message.author.id, timeout: 3600000 })
             const pageOne = new MessageEmbed()
