@@ -9,8 +9,8 @@
   "GENIUS_API_KEY": "",
   "NODES": [
     {
-      "HOST": "disbotlistlavalink.ml",
-      "PASSWORD": "LAVA",
+      "HOST": "lavalink2.devz.cloud",
+      "PASSWORD": "mathiscool",
       "PORT": 443,
       "IDENTIFIER": "node",
       "RETRY_AMOUNT": 10,
