@@ -58,7 +58,7 @@
     "url": "https://github.com/Weeb-Devs/Laffey/issues"
   },
   "engines": {
-    "node": ">=14.x"
+    "node": "16"
   },
   "homepage": "https://github.com/Weeb-Devs/Laffey#readme"
 }
