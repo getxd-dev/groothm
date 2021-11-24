@@ -1,5 +1,7 @@
 const {Manager} = require('erela.js');
 const Spotify = require('better-erela.js-spotify').default;
+const Facebook = require("erela.js-facebook");
+const AppleMusic = require("erela.js-apple");
 const deezer = require('erela.js-deezer');
 const chalk = require('chalk');
 const {MessageEmbed, Collection} = require('discord.js');
@@ -13,7 +15,7 @@ class lavalink extends Manager {
     constructor(client) {
         super({
             nodes: collect(NODES),
-            plugins: [new Spotify({clientId: SPOTIFY_CLIENT_ID, clientSecret: SPOTIFY_CLIENT_SECRET, strategy: 'API'}), new deezer()],
+            plugins: [new Spotify({clientId: SPOTIFY_CLIENT_ID, clientSecret: SPOTIFY_CLIENT_SECRET, strategy: 'API'}), new deezer(), new Facebook(), new AppleMusic()],
             autoPlay: true,
             shards: 0,
             send: (id, payload) => {
