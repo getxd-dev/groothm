@@ -9,13 +9,13 @@
   "GENIUS_API_KEY": "",
   "NODES": [
     {
-      "HOST": "node1.cjstevenson.com",
-      "PASSWORD": "lookbehindyou",
+      "HOST": "lavalink2.devz.cloud",
+      "PASSWORD": "mathiscool",
       "PORT": 443,
       "IDENTIFIER": "node",
       "RETRY_AMOUNT": 10,
       "RETRY_DELAY": 5000,
-      "SECURE": false
+      "SECURE": true
     }
   ],
   "AUTO_RESUME_DELAY": 15,
