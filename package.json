@@ -1,6 +1,6 @@
 {
   "name": "groothm",
-  "version": "2.0.0",
+  "version": "2.3.0",
   "description": "Adorable shipgirl music bot that will spice up your guild",
   "main": "index.js",
   "dependencies": {
