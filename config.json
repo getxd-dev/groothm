@@ -9,13 +9,13 @@
   "GENIUS_API_KEY": "",
   "NODES": [
     {
-      "HOST": "lavalink2.devz.cloud",
+      "HOST": "144.172.80.82",
       "PASSWORD": "youshallnotpass",
-      "PORT": 443,
+      "PORT": 30006,
       "IDENTIFIER": "node",
       "RETRY_AMOUNT": 10,
       "RETRY_DELAY": 5000,
-      "SECURE": true
+      "SECURE": false
     }
   ],
   "AUTO_RESUME_DELAY": 15,
