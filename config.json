@@ -10,7 +10,7 @@
   "NODES": [
     {
       "HOST": "lavalink2.devz.cloud",
-      "PASSWORD": "mathiscool",
+      "PASSWORD": "youshallnotpass",
       "PORT": 443,
       "IDENTIFIER": "node",
       "RETRY_AMOUNT": 10,
