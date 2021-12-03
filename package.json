@@ -4,6 +4,7 @@
   "description": "Adorable shipgirl music bot that will spice up your guild",
   "main": "index.js",
   "dependencies": {
+    "@ksoft/api": "^3.1.9",
     "abort-controller": "^3.0.0",
     "asynckit": "^0.4.0",
     "aws4": "^1.11.0",
