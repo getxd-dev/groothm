@@ -4,6 +4,7 @@ require('./src/modules/console');
 console.log(chalk.yellow('------------------------------------------------------------------------------------------------'))
 console.log()
 console.log(chalk.red('Groothm starting... uwu. :3'))
+console.log(chalk.yellow(`Version: ${require('./package.json').version}`))
 console.log()
 console.log(chalk.yellow('------------------------------------------------------------------------------------------------'))
 console.log()
