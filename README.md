@@ -4,4 +4,4 @@ to do:
 <br>
 -add search command
 <br>
--change progress bar
+-change progress bar (DONE)
