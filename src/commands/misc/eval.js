@@ -8,7 +8,7 @@ module.exports = {
     usage: 'eval < code >',
     async execute(message, args, client) {
         if (!client.owners.includes(message.author.id))
-            return message.channel.send('Unauthorized');
+            return message.channel.send('only cool kidz can use this');
 
         try {
             const code = args.join(" ")
